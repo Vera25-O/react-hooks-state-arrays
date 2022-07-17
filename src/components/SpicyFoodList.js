@@ -9,7 +9,7 @@ function SpicyFoodList() {
     console.log(newFood);
   }
 
-  const foodList = foods.map((food) => (
+  const foodList = foods.filter((food) => (
     <li key={food.id}>
       {food.name} | Heat: {food.heatLevel} | Cuisine: {food.cuisine}
     </li>
@@ -20,7 +20,16 @@ function SpicyFoodList() {
       <button onClick={handleAddFood}>Add New Food</button>
       <ul>{foodList}</ul>
     </div>
+
+
+
+
   );
+
+
+
+
+  
 }
 
 export default SpicyFoodList;
